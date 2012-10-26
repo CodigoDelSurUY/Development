@@ -1,0 +1,94 @@
+{
+    "project": {},
+    "files": {
+        "facebookApp.js": {
+            "name": "facebookApp.js",
+            "modules": {},
+            "classes": {
+                "FacebookApp": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "FacebookApp": 1
+            }
+        },
+        "general.js": {
+            "name": "general.js",
+            "modules": {},
+            "classes": {
+                "FacebookApp.General": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "FacebookApp.General": 1
+            }
+        }
+    },
+    "modules": {},
+    "classes": {
+        "FacebookApp": {
+            "name": "FacebookApp",
+            "shortname": "FacebookApp",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "FacebookApp",
+            "file": "facebookApp.js",
+            "line": 1,
+            "description": "FacebookApp global var."
+        },
+        "FacebookApp.General": {
+            "name": "FacebookApp.General",
+            "shortname": "FacebookApp.General",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "FacebookApp.General",
+            "file": "general.js",
+            "line": 1,
+            "description": "FacebookApp.General namespace."
+        }
+    },
+    "classitems": [
+        {
+            "file": "facebookApp.js",
+            "line": 8,
+            "description": "Creates new namespace inside FacebookApp global var.",
+            "itemtype": "method",
+            "name": "namespace",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "Name of the namespace.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The new namespace.",
+                "type": "Object"
+            },
+            "class": "FacebookApp",
+            "namespace": "FacebookApp"
+        },
+        {
+            "file": "general.js",
+            "line": 9,
+            "description": "Logs in the console.",
+            "itemtype": "method",
+            "name": "log",
+            "params": [
+                {
+                    "name": "message",
+                    "description": "Message to log.",
+                    "type": "String"
+                }
+            ],
+            "class": "FacebookApp.General",
+            "namespace": "FacebookApp.General"
+        }
+    ]
+}

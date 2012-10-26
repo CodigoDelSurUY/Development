@@ -1,0 +1,26 @@
+.photo {
+	padding: 2px;
+	border: 1px solid;
+	margin: 5px;
+	float: left;
+	width: 200px;
+}
+.albumList {
+	margin: 10px;
+}
+.albumName {
+	color: #478D9B;
+	font-size: 13px;
+	float: left;
+	margin-right: 20px;
+}
+.albumSelected {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 18px;
+	color: red;
+	text-decoration: underline;
+}
+#albumPhoto {
+	margin-top: 15px;
+}
