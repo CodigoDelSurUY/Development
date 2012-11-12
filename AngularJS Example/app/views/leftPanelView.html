@@ -1,0 +1,25 @@
+<div ng-controller="LeftPanelController" class="four columns border margin-top">
+
+	<div class="feedsTitle">
+		<h5 class="float-left">Feeds</h5>
+
+	    <img src="resources/images/global/spinner.gif" ng-model="working" class="spinner" ng-class="{hide: !working}">
+	</div>
+
+    <ul class="feeds clear-both">
+        <li ng-repeat="feed in feeds" class="feed-li">
+            <input class="feedCheckbox" type="checkbox" ng-model="feed.checked" name="feed">{{feed.accountname}}
+        </li>
+    </ul>
+
+    <a class="tiny button radius float-right margin-bottom" ng-click="getMessages()">Refresh</a>
+
+    <h5 class="clear-both">Incoming Messages</h5>
+
+    <ul class="incomingMessages" ui-event="{ scroll : 'scrollCallback($event)' }">
+        <li ng-repeat="message in messages" class="message-li message" ng-class="{selected: message.selected}"  ng-click="notifyMessageSelection(message)">@{{message.senderscreenname}} : {{message.message}} Status:{{message.mstatus}}</li>
+    </ul>
+
+</div>
+
+<!-- ng-click="setMessageSelected(message) -->

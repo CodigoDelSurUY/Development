@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+-->
+<!--[if IE 8]>
+    <html ng-app class="no-js lt-ie9" lang="en">
+    <![endif]-->
+    <!--[if gt IE 8]>
+        <!-->
+        <html ng-app="AchieveServiceSocialMedia" class="no-js" lang="en">
+        <!--<![endif]-->
+        
+        <head>
+		    <meta charset="utf-8" />
+		    <!-- Set the viewport width to device width for mobile -->
+		    <meta name="viewport" content="width=device-width" />
+		    <title>Page Title</title>
+		    <!-- Included CSS Files, use foundation.css if you do
+		    not want minified code -->
+		    <link rel="stylesheet" href="lib/foundation/stylesheets/foundation.min.css">
+		    <link rel="stylesheet" href="lib/foundation/stylesheets/app.css">
+		    <link rel="stylesheet" href="lib/angular-ui-0.3.1/build/angular-ui.css">
+		    <!-- Custom Modernizr for Foundation -->
+		    <script src="lib/foundation/javascripts/modernizr.foundation.js"></script>
+		    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script> -->
+		    <script src="lib/angular-1.0.2/angular.min.js"></script>
+		    <script src="todo.js"></script>
+		    <link rel="stylesheet" href="todo.css">
+
+		    <script src="controllers/mainPanelController.js"></script>
+		    <script src="controllers/rightPanelController.js"></script>
+		    <script src="controllers/leftPanelController.js"></script>
+  			<script src="app.js"></script>
+  			<!--[if lte IE 8]>
+			    <script>
+			    // The ieshiv takes care of our ui.directives, bootstrap module directives and 
+			    // AngularJS's ng-view, ng-include, ng-pluralize and ng-switch directives.
+			    // However, IF you have custom directives (yours or someone else's) then
+			    // enumerate the list of tags in window.myCustomTags
+			 
+			    // window.myCustomTags = [ 'yourDirective', 'somebodyElsesDirective' ]; // optional
+			    </script>
+			    <script src="lib/angular-ui-0.3.1/build/angular-ui-ieshiv.js"></script>
+			<![endif]-->
+			<script src="lib/angular-ui-0.3.1/build/angular-ui.js"></script>
+
+		</head>
+		<body ng-controller="MainPanelController">
+			<!-- Page Layout HTML here -->
+			<div ng-view></div>
+		    
+		    <!-- Latest version of jQuery -->
+		    <script src="lib/foundation/javascripts/jquery.js"></script>
+		    <script src="lib/foundation/javascripts/foundation.min.js"></script>
+		    <!-- Initialize JS Plugins -->
+		    <script src="lib/foundation/javascripts/app.js"></script>
+		</body>
+</html>

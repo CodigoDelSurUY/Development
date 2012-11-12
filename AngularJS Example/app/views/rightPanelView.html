@@ -1,0 +1,59 @@
+<div ng-controller="RightPanelController" class="seven columns offset-by-one border margin-top">
+
+	<div ng-class="{mask: mask}"></div>
+
+	<div>
+		<form>
+     	<!-- <div class="row"> -->
+	     	<!-- <div class="six columns"> -->
+	     	<div class="float-left">
+	     		<h4 id="message">Message</h4>
+	     	</div>
+	     	<div class="float-right" style="margin-top: 15px;">
+	     		<ul class="button-group radius float-right">
+	  				<li><a class="tiny button radius" ng-click="reply()">Reply</a></li>
+	  				<li><a class="tiny button radius" ng-click="markHandled()">Handled</a></li>
+	  				<li><a class="tiny button radius" ng-click="deleteMessage()">Delete</a></li>
+	  			</ul>
+	     	</div>
+  		<!-- </div> -->
+  		
+  		<textarea placeholder="Message" readonly>{{messageSelected.message}}</textarea>
+	</form>
+
+	<form>
+  		<h4>Customer Search</h4>
+  		<input type="text" placeholder="Username or Email Address" value={{messageSelected.user.screen_name}}>
+  		<textarea placeholder="No Results found"></textarea>
+  		<a href="#" class="tiny button radius float-right">Create New Customer</a>
+	</form>
+
+	<form>
+  		<h4>FAQ / Service Search</h4>
+  		<input type="text" placeholder="Search">
+  		
+  			<ul>
+		        <li style="padding-right: 0px; display: inline-table; width: 100%;" class="clear-both" ng-repeat="faq in faqs">
+		        	<span style="float: left;">{{faq.text}}</span>  <a style="clear: both;
+float: right; margin-top: 15px;" class="tiny button radius" ng-click="sendLinkAsResponse(faq)">Send link as response</a>
+		        </li>
+		    </ul>
+  		
+	</form>
+	</div>
+
+	<div class="row">
+		<div class="replyContainer modal" ng-class="{hide: !replying}">
+			<form name="replyForm">
+		  		<h4>Send Response</h4>
+		  		<input type="text" placeholder="Username or Email Address" value={{messageSelected.senderscreenname}}>
+		  		<textarea name="replyMessage" ng-model="replyMessage" placeholder="No Results found" ng-change="checkNumberOfChars()">{{replyMessage}}</textarea>
+		  		<span class="error" ng-show="showError">Too long!!</span>
+		  		<span>{{replyMessage.length}} / 140</span>
+		  		<a class="tiny button radius" ng-click="cancelReply()">Cancel</a>
+		  		<a class="tiny button radius" ng-click="sendReply()">Send reply</a>
+			</form>
+		</div>
+	</div>
+	
+</div>

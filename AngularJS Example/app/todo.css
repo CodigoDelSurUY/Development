@@ -1,0 +1,109 @@
+body {
+	background-image: url('resources/images/global/noisy_grid.png');
+}
+
+.done-true {
+	text-decoration: line-through;
+	color: grey;
+}
+
+.hide {
+	display: none;
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 20px;
+}
+
+li {
+	border-bottom: 1px #DDD dotted;
+	padding: 3px;
+	margin: 0px 3px 0px 3px;
+}
+
+form {
+	clear: both;
+}
+
+.feedsTitle {
+	height: 30px;
+}
+
+.border {
+	/*border: solid 2px black;*/
+}
+
+.margin-top {
+	margin-top: 30px;
+}
+.margin-bottom {
+	margin-bottom: 30px;
+}
+
+.spinner {
+	height: 16px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+.selected {
+	background-color: #2BA6CB;
+	color: white;
+}
+
+.replyContainer {
+	position: absolute;
+	background-color: #EEE;
+	padding: 30px;
+	border: solid 1px #DDD;
+	top: 20%;
+	width: 80%;
+	height: 60%;
+	left: 10%;
+}
+
+.semiTransparent {
+	opacity: 0.2;
+}
+
+.mask {
+	opacity: 0.3;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: black;
+	z-index: 9000;
+}
+
+.modal {
+	z-index: 9001;
+}
+
+.feeds {
+	margin: 20px;
+}
+
+.incomingMessages {
+	height: 300px;
+	overflow-y: scroll;
+	margin: 0px 20px 0px 20px;
+}
+
+.feedCheckbox {
+	margin-right: 10px;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.clear-both {
+	clear: both;
+}
