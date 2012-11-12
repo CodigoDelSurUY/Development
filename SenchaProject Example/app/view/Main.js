@@ -28,7 +28,7 @@ Ext.define("SenchaProject.view.Main", {
                 ].join("")
             },
             {
-                title: 'Get Started',
+                title: 'Get Started!',
                 iconCls: 'action',
 
                 items: [
